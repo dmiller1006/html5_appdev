@@ -12,8 +12,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/canvas.js"></script>
-    <script src="scripts/classes.js"></script>
-    
+    <!-- <script src="scripts/classes.js"></script> -->
+    <script src="scripts/coords.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -33,7 +33,9 @@
         <h4 class="page-title page-subtitle">Fun for the Whole Family!</h4>
     </header>
     <div class="container">
-        <h2 class="canvas-title">Click the field to take a shot!</h2>
+        <h2 class="canvas-title">Click the field to take a shot and show your position!</h2>
+        <h4 class="canvas-subtitle">Your field position:</h4>
+        <output class="canvas-coords" id="output">X and Y coordinates</output>
        <canvas id="canvas" height="400px" width="800px"></canvas>
     </div>
     <footer class="main-footer">

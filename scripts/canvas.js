@@ -65,8 +65,6 @@ $(document).ready(function() {
         ball.x += ball.dx;
         ball.y += ball.dy;
 
-
-
         if (ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
             ball.dy *= -1;
         }

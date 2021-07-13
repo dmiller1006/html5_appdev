@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            background-color: lightgrey;
+            margin: 0 auto;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h3>Geolocation Example</h3>
+            <code id="output"></code><br>
+            <button id="button">Click Here To Post Location</button>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById('button').addEventListener('click', function() {
+                    var geoLocationReference = window.navigator.geolocation; // reference geolocation API
+                    geoLocationReference.getCurrentPosition(printCoordinates); // user getCurrentPosition() method to retrieve geolocation object
+
+                    function printCoordinates(geoObj) {
+                        console.log(geoObj);
+                        var date = new Date(geoObj.timestamp);
+                        
+                        var output = document.getElementById('output');
+                        output.innerHTML = `Your latitude is ${geoObj.coords.latitude}<br>
+                            Your longitude is ${geoObj.coords.longitude}<br>
+                            This location was taken on ${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`;
+                    }
+            })
+        }
+    </script>
+</body>
+</html>
