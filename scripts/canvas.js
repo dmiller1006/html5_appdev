@@ -45,8 +45,6 @@ $(document).ready(function() {
         dy: 5
     };
 
-
-
     function drawBall() {
         ctx.beginPath();
         ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
@@ -77,7 +75,6 @@ $(document).ready(function() {
             else {
                 ball.dx *= -1;
             }
-            
         }
         
         if (animateOn == true) { requestAnimationFrame(update); 

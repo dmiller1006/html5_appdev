@@ -37,7 +37,7 @@
                     geoLocationReference.getCurrentPosition(printCoordinates); // user getCurrentPosition() method to retrieve geolocation object
 
                     function printCoordinates(geoObj) {
-                        console.log(geoObj);
+                        console.log(geoObj);    
                         var date = new Date(geoObj.timestamp);
                         
                         var output = document.getElementById('output');
