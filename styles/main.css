@@ -216,6 +216,7 @@ legend {
 input, label, textarea {
     margin: 5px;
     font-weight: bold;
+    resize: none;
 }
 
 /* about us page styling */
