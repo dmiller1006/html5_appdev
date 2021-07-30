@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="central city sports, sports complex, sports leagues, recreational center">
-    <meta name="author" content="Daniel Miller"> 
+    <meta name="author" content="authorName"> 
     <title>Our Blog - Central City Recreational Complex</title> 
     <style>
         * {
@@ -19,10 +19,15 @@
         .container {
             width: 100vw;
             height: 100vh;
+            padding: 5px;
             border: 5px solid black;
             display: grid;
-            grid-template-columns: 1fr 2fr 2fr 1fr;
+            grid-template-columns: 1fr 4fr 1fr;
             grid-template-rows: 2fr 10fr 1fr;
+            /* gap: 10px; */
+            /* column-gap: 5px; */
+            /* row-gap: 10px; */
+            
         }
         .container > div {
             display: grid;
@@ -33,19 +38,10 @@
             border: 1px solid black;
         }
         #item1 {
-            grid-column: 1 / 5;
+            grid-column: 1 / 4;
         }
-        /* #item2 {
-            
-        } */
-        #item3 {
-            grid-column: 2 / 4;
-        }
-        /* #item4 {
-            
-        } */
         #item5 {
-            grid-column: 1 / 5;
+            grid-column: 1 / 4;
         }
 
     </style>
